@@ -1298,6 +1298,8 @@ class Homepage extends StatelessWidget {
           ),
 
           const SizedBox(height: 60),
+
+          Expanded(child: Padding(padding: EdgeInsetsGeometry.fromSTEB(0, 0, 0, 10)))
         ],
       ),
     );
