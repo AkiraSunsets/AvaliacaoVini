@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -1297,9 +1298,221 @@ class Homepage extends StatelessWidget {
             ),
           ),
 
-          const SizedBox(height: 60),
+          const SizedBox(height: 30),
 
-          Expanded(child: Padding(padding: EdgeInsetsGeometry.fromSTEB(0, 0, 0, 10)))
+          SizedBox(
+            height: 600,
+            width: 450,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: PageView(
+                controller: PageController(initialPage: 0),
+                children: [
+                  Column(
+                    children: [
+                      //card
+                      Expanded(
+                        child: Container(
+                          width: 450,
+                          padding: const EdgeInsets.all(20),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(width: 0.5),
+                          ),
+                          child: SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(8),
+                                  child: SvgPicture.network(
+                                    'https://upload.wikimedia.org/wikipedia/commons/6/6b/Bitmap_VS_SVG.svg',
+                                    width: 300,
+                                    height: 130,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+
+                                const SizedBox(height: 10),
+
+                                // header
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    const Text(
+                                      'Tool & Tech',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 19,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Container(
+                                          width: 70,
+                                          height: 35,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                              30,
+                                            ),
+                                          ),
+                                        ),
+                                        const SizedBox(width: 10),
+                                        Row(
+                                          children: const [
+                                            Text(
+                                              '1',
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            SizedBox(width: 5),
+                                            Icon(
+                                              Icons.people_rounded,
+                                              color: Colors.white,
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+
+                                const SizedBox(height: 10),
+
+                                // title
+                                const Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    "2º Sem | Integrador Front/Backend Project",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ),
+
+                                const SizedBox(height: 20),
+
+                                const Text(
+                                  'Plataforma de monitoramento com visualização de dados em tempo real.\n',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 14,
+                                    color: Colors.white,
+                                  ),
+                                ),
+
+
+                                Column(
+                                  children: [
+                                    const SizedBox(height: 20),
+
+                                    Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Container(
+                                              width: 80,
+                                              height: 30,
+                                              decoration: BoxDecoration(
+                                                color: Color(0xAC7928CA),
+                                                borderRadius:
+                                                    BorderRadius.circular(50),
+                                                border: Border.all(
+                                                  color: Color(0xFF7928CA),
+                                                ),
+                                              ),
+                                              alignment: Alignment.center,
+                                              child: const Text(
+                                                "#React",
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ),
+                                            
+                                            const SizedBox(width: 15),
+
+                                            Container(
+                                              width: 80,
+                                              height: 30,
+                                              decoration: BoxDecoration(
+                                                color: Color(0xAC7928CA),
+                                                borderRadius:
+                                                    BorderRadius.circular(50),
+                                                border: Border.all(
+                                                  color: Color(0xFF7928CA),
+                                                ),
+                                              ),
+                                              alignment: Alignment.center,
+                                              child: const Text(
+                                                "#CSS",
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ),
+
+                                            const SizedBox(width: 15),
+                                            
+                                            Container(
+                                              width: 120,
+                                              height: 30,
+                                              decoration: BoxDecoration(
+                                                color: Color(0xAC7928CA),
+                                                borderRadius:
+                                                    BorderRadius.circular(50),
+                                                border: Border.all(
+                                                  color: Color(0xFF7928CA),
+                                                ),
+                                              ),
+                                              alignment: Alignment.center,
+                                              child: const Text(
+                                                "#Bootstrap",
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ),
+                                             const SizedBox(width: 15),
+                                            
+                                            Container(
+                                              width: 80,
+                                              height: 30,
+                                              decoration: BoxDecoration(
+                                                color: Color(0xAC7928CA),
+                                                borderRadius:
+                                                    BorderRadius.circular(50),
+                                                border: Border.all(
+                                                  color: Color(0xFF7928CA),
+                                                ),
+                                              ),
+                                              alignment: Alignment.center,
+                                              child: const Text(
+                                                "#Sqlite",
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 30),
         ],
       ),
     );
