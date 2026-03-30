@@ -2160,6 +2160,281 @@ class Homepage extends StatelessWidget {
           ),
 
           const SizedBox(height: 20),
+
+          Divider(thickness: 0.2, color: Colors.grey),
+
+          const SizedBox(height: 20),
+
+          Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Center(
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  width: 450,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF14162A),
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: Color(0xFFDA0067), width: 0.5),
+                  ),
+
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+
+                    children: [
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Row(
+                            spacing: 10,
+
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Icon(
+                                    Icons.work_outline,
+                                    color: Color(0xffda0067),
+                                    size: 35,
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 20),
+
+                              Column(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+
+                                children: [
+                                  Text(
+                                    'Aprendiz de Soluções Digitais',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 16,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+
+                                  const SizedBox(height: 5),
+                                  Text(
+                                    'Bosch Brazil',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 14,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 5),
+
+                                  Text(
+                                    'Jan/2025 - Atual',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w300,
+                                      fontSize: 14,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          const SizedBox(height: 20),
+
+          Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Center(
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  width: 450,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF14162A),
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: Color(0xFFDA0067), width: 0.5),
+                  ),
+
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+
+                    children: [
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Row(
+                            spacing: 10,
+
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Icon(
+                                    Icons.work_outline,
+                                    color: Color(0xffda0067),
+                                    size: 35,
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 20),
+
+                              Column(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+
+                                children: [
+                                  Text(
+                                    'Aprendiz de Soluções Digitais',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 16,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+
+                                  const SizedBox(height: 5),
+                                  Text(
+                                    'Bosch Brazil',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 14,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 5),
+
+                                  Text(
+                                    'Jan/2025 - Atual',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w300,
+                                      fontSize: 14,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          const SizedBox(height: 20),
+
+          Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Center(
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  width: 450,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: Color(0xFF14162A),
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: Color(0xFFDA0067), width: 0.5),
+                  ),
+
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+
+                    children: [
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Row(
+                            spacing: 10,
+
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  FaIcon(
+                                    FontAwesomeIcons.graduationCap,
+                                    color: Color(0xffda0067),
+                                    size: 35,
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 20),
+
+                              Column(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+
+                                children: [
+                                  Text(
+                                    'Aprendiz de Soluções Digitais',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 16,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+
+                                  const SizedBox(height: 5),
+                                  Text(
+                                    'Bosch Brazil',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 14,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 5),
+
+                                  Text(
+                                    'Jan/2025 - Atual',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w300,
+                                      fontSize: 14,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          const SizedBox(height: 30),
+
+
+          Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Row(
+                
+              )
+            ],
+          )
         ],
       ),
     );
