@@ -1541,34 +1541,35 @@ class Homepage extends StatelessWidget {
                                                 ),
                                               ),
                                             ),
+                                          ],
+                                        ),
+                                        const SizedBox(height: 30),
 
-                                          
-                                              ],
-                                              
-                                            ),
-                                              const SizedBox(height: 30),
+                                        Divider(
+                                          thickness: 0.2,
+                                          color: Colors.grey,
+                                        ),
 
-                                            Divider(
-                                              thickness: 0.2, 
-                                              color: Colors.grey
+                                        const SizedBox(height: 20),
+
+                                        Row(
+                                          children: const [
+                                            SizedBox(width: 5),
+                                            Text(
+                                              'View Code',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 16,
+                                                color: Color(0xFFFF0C92),
+                                                decoration:
+                                                    TextDecoration.underline,
                                               ),
-
-                                            const SizedBox(height: 20),
-
-                                            Row (
-                                              children: const [
-                                                SizedBox(width: 5),
-                                                Text(
-                                                  'View Code', 
-                                                  style: TextStyle(
-                                                    fontWeight: FontWeight.bold, 
-                                                    fontSize: 16, 
-                                                    color: Color(0xFFFF0C92), 
-                                                    decoration: TextDecoration.underline, 
-                                                  ),
-                                                ),
-                                                SizedBox(width: 5), 
-                                                Icon(Icons.code, color: Color(0xFFFF0C92)),
+                                            ),
+                                            SizedBox(width: 5),
+                                            Icon(
+                                              Icons.code,
+                                              color: Color(0xFFFF0C92),
+                                            ),
                                           ],
                                         ),
                                       ],
@@ -1587,7 +1588,7 @@ class Homepage extends StatelessWidget {
             ),
           ),
 
-           const SizedBox(height: 30),
+          const SizedBox(height: 30),
 
           SizedBox(
             height: 550,
@@ -1830,34 +1831,35 @@ class Homepage extends StatelessWidget {
                                                 ),
                                               ),
                                             ),
+                                          ],
+                                        ),
+                                        const SizedBox(height: 30),
 
-                                          
-                                              ],
-                                              
-                                            ),
-                                              const SizedBox(height: 30),
+                                        Divider(
+                                          thickness: 0.2,
+                                          color: Colors.grey,
+                                        ),
 
-                                            Divider(
-                                              thickness: 0.2, 
-                                              color: Colors.grey
+                                        const SizedBox(height: 20),
+
+                                        Row(
+                                          children: const [
+                                            SizedBox(width: 5),
+                                            Text(
+                                              'View Code',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 16,
+                                                color: Color(0xFFFF0C92),
+                                                decoration:
+                                                    TextDecoration.underline,
                                               ),
-
-                                            const SizedBox(height: 20),
-
-                                            Row (
-                                              children: const [
-                                                SizedBox(width: 5),
-                                                Text(
-                                                  'View Code', 
-                                                  style: TextStyle(
-                                                    fontWeight: FontWeight.bold, 
-                                                    fontSize: 16, 
-                                                    color: Color(0xFFFF0C92), 
-                                                    decoration: TextDecoration.underline, 
-                                                  ),
-                                                ),
-                                                SizedBox(width: 5), 
-                                                Icon(Icons.code, color: Color(0xFFFF0C92)),
+                                            ),
+                                            SizedBox(width: 5),
+                                            Icon(
+                                              Icons.code,
+                                              color: Color(0xFFFF0C92),
+                                            ),
                                           ],
                                         ),
                                       ],
@@ -1877,28 +1879,91 @@ class Homepage extends StatelessWidget {
           ),
           const SizedBox(height: 30),
 
-          Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text(
-                    'Experiences', 
-                    style: 
-                    TextStyle(
-                      fontSize:28, 
-                      color: Colors.white, 
-                    ),
-                  ), 
-                  SizedBox(height: 20),
-                ],
-              )
-            ],
-          )
-        ],
+Column(
+  children: [
+    const SizedBox(height: 20),
+
+    // TÍTULO
+    const Text(
+      'Experiences',
+      style: TextStyle(
+        fontSize: 28,
+        color: Colors.white,
       ),
-    );
-  }
+    ),
+
+    const SizedBox(height: 20),
+
+    // CARD
+    Center(
+      child: Container(
+        width: 350,
+        height: 95,
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        decoration: BoxDecoration(
+          color: const Color(0xff14162A),
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(
+            color: const Color(0xffda0067),
+            width: 0.5,
+          ),
+        ),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const SizedBox(width: 10),
+
+            const Icon(
+              Icons.work_outline,
+              color: Color(0xffda0067),
+              size: 35,
+            ),
+
+            const SizedBox(width: 20),
+
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'Aprendiz de Digital Solutions',
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white,
+                    ),
+                  ),
+
+                  SizedBox(height: 5),
+
+                  Text(
+                    'Bosch Brazil',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.white,
+                    ),
+                  ),
+
+                  SizedBox(height: 5),
+
+                  Text(
+                    'Jan/2025 - Atual',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w300,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+  ],
+),
+  );
+}
 }
