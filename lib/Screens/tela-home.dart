@@ -806,7 +806,7 @@ class _HomepageState extends State<Homepage> {
 
                       decoration: BoxDecoration(),
                       child: Text(
-                        "Tecnologias que eu tenho estuado/trabalhado recentemente.",
+                        "Tecnologias que eu tenho estudado/trabalhado recentemente.",
                         style: TextStyle(
                           fontWeight: FontWeight.normal,
                           color: Colors.white,
@@ -1187,7 +1187,162 @@ class _HomepageState extends State<Homepage> {
           ),
 
           const SizedBox(height: 50),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 50),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      "My ",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 28,
+                      ),
+                    ),
+                    GradientText(
+                      "Projects",
+                      style: const TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      colors: const [
+                        Color(0xFFBF0C6D),
+                        Color(0xFF3A2DFF),
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  "Alguns projetos feitos por mim.",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                  ),
+                ),
+              ],
+            ),
+          ),
 
+          const SizedBox(height: 30),
+
+          SizedBox(
+            height: 500,
+            child: PageView(
+              controller: PageController(viewportFraction: 0.85),
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF14162A),
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(color: Colors.white12, width: 0.5),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(8),
+                          child: SvgPicture.network(
+                            'https://upload.wikimedia.org/wikipedia/commons/6/6b/Bitmap_VS_SVG.svg',
+                            width: double.infinity,
+                            height: 150,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        const SizedBox(height: 15),
+                        const Text(
+                          'Tool & Tech',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 22,
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(height: 5),
+                        const Text(
+                          "2º Sem | Integrador Front/Backend Project",
+                          style: TextStyle(color: Colors.white70, fontSize: 13),
+                        ),
+                        const SizedBox(height: 15),
+                        const Text(
+                          'Plataforma de monitoramento com visualização de dados em tempo real.',
+                          style: TextStyle(color: Colors.white, fontSize: 14),
+                        ),
+                        const SizedBox(height: 20),
+                        
+                        // TAGS MANUAIS
+                        Wrap(
+                          spacing: 8,
+                          runSpacing: 8,
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                              decoration: BoxDecoration(
+                                color: const Color(0xAC7928CA),
+                                borderRadius: BorderRadius.circular(50),
+                                border: Border.all(color: const Color(0xFF7928CA)),
+                              ),
+                              child: const Text("#React", style: TextStyle(color: Colors.white, fontSize: 11)),
+                            ),
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                              decoration: BoxDecoration(
+                                color: const Color(0xAC7928CA),
+                                borderRadius: BorderRadius.circular(50),
+                                border: Border.all(color: const Color(0xFF7928CA)),
+                              ),
+                              child: const Text("#Django", style: TextStyle(color: Colors.white, fontSize: 11)),
+                            ),
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                              decoration: BoxDecoration(
+                                color: const Color(0xAC7928CA),
+                                borderRadius: BorderRadius.circular(50),
+                                border: Border.all(color: const Color(0xFF7928CA)),
+                              ),
+                              child: const Text("#Sqlite", style: TextStyle(color: Colors.white, fontSize: 11)),
+                            ),
+                          ],
+                        ),
+                        
+                        const Spacer(),
+                        const Divider(color: Colors.white12),
+                        GestureDetector(
+                          onTap: () => _abrirLink('https://github.com/AkiraSunsets'),
+                          child: const Row(
+                            children: [
+                              Text(
+                                'View Code',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15,
+                                  color: Color(0xFFFF0C92),
+                                  decoration: TextDecoration.underline,
+                                ),
+                              ),
+                              SizedBox(width: 8),
+                              Icon(Icons.code, color: Color(0xFFFF0C92), size: 18),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          
+          const SizedBox(height: 50),
           Column(
             mainAxisSize: MainAxisSize.max,
             children: [
