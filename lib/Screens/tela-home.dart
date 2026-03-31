@@ -1267,7 +1267,7 @@ class _HomepageState extends State<Homepage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             const Text(
-                              'Tool & Tech',
+                              'LetMovie',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 19,
@@ -1283,7 +1283,7 @@ class _HomepageState extends State<Homepage> {
                         ),
                         const SizedBox(height: 10),
                         const Text(
-                          "2º Sem | Integrador Front/Backend Project",
+                          "2º Sem | Frontend Project",
                           style: TextStyle(
                             color: Color(0xFF584DF3),
                             fontSize: 14,
@@ -1292,17 +1292,16 @@ class _HomepageState extends State<Homepage> {
                         ),
                         const SizedBox(height: 15),
                         const Text(
-                          'Plataforma de monitoramento com visualização de dados em tempo real.',
+                          'Plataforma web de catálogo de filmes, com painel administrativo para gerenciamento de conteúdos e atenção à usabilidade.',
                           style: TextStyle(color: Colors.white, fontSize: 14),
                         ),
                         const SizedBox(height: 25),
 
-                        // TAGS DECLARADAS UMA POR UMA (ESTILO MANUAL)
                         Wrap(
                           spacing: 8,
                           runSpacing: 8,
                           children: [
-                            // TAG #React
+                            // #React
                             Container(
                               padding: const EdgeInsets.symmetric(
                                 horizontal: 12,
