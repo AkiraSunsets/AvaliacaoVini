@@ -1176,7 +1176,7 @@ class _HomepageState extends State<Homepage> {
             children: [
               LayoutBuilder(
                 builder: (context, constraints) {
-                  double dynamicHeight = constraints.maxWidth < 350 ? 500 : 500;
+                  double dynamicHeight = constraints.maxWidth < 350 ? 460 : 440;
                   return SizedBox(
                     height: dynamicHeight,
                     child: PageView(
@@ -1274,14 +1274,23 @@ class _HomepageState extends State<Homepage> {
 
                         //projeto 6 - chacaras
                         const CardProjeto(
-                      titulo: 'Espaço para Eventos',
-                      subtitulo: 'Frontend Developer | UX/UI',
-                      descricao: 'Portfólio digital para divulgação de chácaras, reunindo informações e contato.',
-                      imagemUrl: 'https://akira-sunsets-portfolio.vercel.app/assets/img/chacaras.jpg',
-                      tags: ['#HTML', '#CSS', '#Javascript', '#Node.js', '#Figma'],
-                      link: 'https://ketlynlnaraujo.wixsite.com/espacoparachacaras',
-                      participantes: '2',
-                    ),
+                          titulo: 'Espaço para Eventos',
+                          subtitulo: 'Frontend Developer | UX/UI',
+                          descricao:
+                              'Portfólio digital para divulgação de chácaras, reunindo informações e contato.',
+                          imagemUrl:
+                              'https://akira-sunsets-portfolio.vercel.app/assets/img/chacaras.jpg',
+                          tags: [
+                            '#HTML',
+                            '#CSS',
+                            '#Javascript',
+                            '#Node.js',
+                            '#Figma',
+                          ],
+                          link:
+                              'https://ketlynlnaraujo.wixsite.com/espacoparachacaras',
+                          participantes: '2',
+                        ),
                       ],
                     ),
                   );
@@ -1746,8 +1755,8 @@ class _HomepageState extends State<Homepage> {
 
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-
             children: [
+              //email
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
@@ -1763,35 +1772,35 @@ class _HomepageState extends State<Homepage> {
                           width: 1,
                         ),
                       ),
-
                       child: const Icon(
                         Icons.email_outlined,
                         color: Color(0xffff1493),
                         size: 24,
                       ),
                     ),
+                    const SizedBox(width: 12),
 
-                    const SizedBox(width: 10),
-
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Email',
-                          style: TextStyle(
-                            color: Color(0xffff1493),
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            'Email',
+                            style: TextStyle(
+                              color: Color(0xffff1493),
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-
-                        SizedBox(height: 2),
-
-                        Text(
-                          'Ketlynlorraynendearaujo@gmail.com',
-                          style: TextStyle(color: Colors.white, fontSize: 15),
-                        ),
-                      ],
+                          SizedBox(height: 2),
+                          Text(
+                            'Ketlynlorraynendearaujo@gmail.com',
+                            style: TextStyle(color: Colors.white, fontSize: 15),
+                            softWrap: true,
+                            overflow: TextOverflow.visible,
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -1799,6 +1808,7 @@ class _HomepageState extends State<Homepage> {
 
               const SizedBox(height: 20),
 
+              // location
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
@@ -1820,28 +1830,26 @@ class _HomepageState extends State<Homepage> {
                         size: 24,
                       ),
                     ),
-
-                    const SizedBox(width: 10),
-
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Location',
-                          style: TextStyle(
-                            color: Color(0xffff1493),
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            'Location',
+                            style: TextStyle(
+                              color: Color(0xffff1493),
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-
-                        SizedBox(height: 2),
-
-                        Text(
-                          'São Paulo - Brazil',
-                          style: TextStyle(color: Colors.white, fontSize: 15),
-                        ),
-                      ],
+                          SizedBox(height: 2),
+                          Text(
+                            'São Paulo - Brazil',
+                            style: TextStyle(color: Colors.white, fontSize: 15),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -1849,6 +1857,7 @@ class _HomepageState extends State<Homepage> {
 
               const SizedBox(height: 20),
 
+              // whats
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
@@ -1865,34 +1874,32 @@ class _HomepageState extends State<Homepage> {
                           width: 1,
                         ),
                       ),
-                      child: FaIcon(
+                      child: const FaIcon(
                         FontAwesomeIcons.whatsapp,
                         color: Color(0xffff1493),
                         size: 24,
                       ),
                     ),
-
-                    const SizedBox(width: 10),
-
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Whatsapp',
-                          style: TextStyle(
-                            color: Color(0xffff1493),
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            'Whatsapp',
+                            style: TextStyle(
+                              color: Color(0xffff1493),
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-
-                        SizedBox(height: 2),
-
-                        Text(
-                          '(19) 99751-2002',
-                          style: TextStyle(color: Colors.white, fontSize: 15),
-                        ),
-                      ],
+                          SizedBox(height: 2),
+                          Text(
+                            '(19) 99751-2002',
+                            style: TextStyle(color: Colors.white, fontSize: 15),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
