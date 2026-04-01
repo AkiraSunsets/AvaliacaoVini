@@ -1756,7 +1756,7 @@ class _HomepageState extends State<Homepage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //email
+              // seção: email
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
