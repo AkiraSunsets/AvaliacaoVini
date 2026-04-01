@@ -3,6 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:portfolioAS/Components/card-project.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -15,6 +17,19 @@ class _HomepageState extends State<Homepage> {
   final TextEditingController _nomeController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _mensagemController = TextEditingController();
+  final PageController _pageController = PageController(
+    initialPage: 0,
+    viewportFraction: 0.85,
+  );
+
+  @override
+  void dispose() {
+    _nomeController.dispose();
+    _emailController.dispose();
+    _mensagemController.dispose();
+    _pageController.dispose();
+    super.dispose();
+  }
 
   Future<void> _abrirLink(String url) async {
     final Uri uri = Uri.parse(url);
@@ -23,7 +38,7 @@ class _HomepageState extends State<Homepage> {
     }
   }
 
-  @override
+  
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF0D0F24),
@@ -233,6 +248,7 @@ class _HomepageState extends State<Homepage> {
             ),
           ),
           const SizedBox(height: 20),
+
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
@@ -240,15 +256,12 @@ class _HomepageState extends State<Homepage> {
               children: [
                 Container(
                   width: MediaQuery.of(context).size.width * 0.75,
-                  height: 150,
+                  height: 200,
                   decoration: BoxDecoration(),
                   child: Text(
                     "Sou a Ketlyn Araújo, estudante de Ciência da Computação e apaixonada por construir pontes entre o código e o design. Atualmente, atuo como Aprendiz em Soluções Digitais na Bosch Brasil, onde mergulho diariamente no universo corporativo para transformar problemas complexos em interfaces funcionais e intuitivas.",
-                    style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                      fontSize: 14,
-                      color: Colors.white,
-                    ),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Color(0xFF94A3B8), fontSize: 16),
                   ),
                 ),
               ],
@@ -298,7 +311,7 @@ class _HomepageState extends State<Homepage> {
                               "Soluções inteligentes com dispositivos conectados.",
                               style: TextStyle(
                                 fontWeight: FontWeight.normal,
-                                color: Colors.white,
+                                color: Color(0xFF94A3B8),
                                 fontSize: 13,
                               ),
                             ),
@@ -355,7 +368,7 @@ class _HomepageState extends State<Homepage> {
                               "Soluções Simples para problemas complexos.",
                               style: TextStyle(
                                 fontWeight: FontWeight.normal,
-                                color: Colors.white,
+                                color: Color(0xFF94A3B8),
                                 fontSize: 13,
                               ),
                             ),
@@ -412,7 +425,7 @@ class _HomepageState extends State<Homepage> {
                               "React, Flutter e interfaces modernas.",
                               style: TextStyle(
                                 fontWeight: FontWeight.normal,
-                                color: Colors.white,
+                                color: Color(0xFF94A3B8),
                                 fontSize: 13,
                               ),
                             ),
@@ -469,7 +482,7 @@ class _HomepageState extends State<Homepage> {
                               "Inovação aplicada no ambiente corporativo.",
                               style: TextStyle(
                                 fontWeight: FontWeight.normal,
-                                color: Colors.white,
+                                color: Color(0xFF94A3B8),
                                 fontSize: 13,
                               ),
                             ),
@@ -489,15 +502,11 @@ class _HomepageState extends State<Homepage> {
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.max,
-
               children: [
                 Row(
-                  mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
-                  spacing: 10,
                   children: [
-                    Text(
+                    const Text(
                       "Soft",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -505,6 +514,9 @@ class _HomepageState extends State<Homepage> {
                         fontSize: 28,
                       ),
                     ),
+
+                    const SizedBox(width: 10),
+
                     GradientText(
                       "Skills",
                       style: const TextStyle(
@@ -512,31 +524,14 @@ class _HomepageState extends State<Homepage> {
                         fontWeight: FontWeight.bold,
                       ),
                       colors: const [Color(0xFFBF0C6D), Color(0xFF3A2DFF)],
-                      gradientType: GradientType.linear,
-                      gradientDirection: GradientDirection.ltr,
                     ),
                   ],
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.75,
-                      height: 40,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(),
-                      child: Text(
-                        "Habilidades interpessoais desenvolvidas no ambiente corporativo.",
-                        style: TextStyle(
-                          fontWeight: FontWeight.normal,
-                          color: Colors.white,
-                          fontSize: 14,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 20),
-                  ],
+                const SizedBox(height: 10),
+                const Text(
+                  "Habilidades interpessoais desenvolvidas no ambiente corporativo.",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Color(0xFF94A3B8), fontSize: 16),
                 ),
               ],
             ),
@@ -761,19 +756,17 @@ class _HomepageState extends State<Homepage> {
             ),
           ),
 
-          const SizedBox(height: 60),
+          const SizedBox(height: 50),
 
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 50),
             child: Column(
-              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Row(
-                  mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
-                  spacing: 10,
                   children: [
-                    Text(
+                    const Text(
                       "Technical",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -781,6 +774,9 @@ class _HomepageState extends State<Homepage> {
                         fontSize: 28,
                       ),
                     ),
+
+                    const SizedBox(width: 10),
+
                     GradientText(
                       "Skills",
                       style: const TextStyle(
@@ -788,34 +784,14 @@ class _HomepageState extends State<Homepage> {
                         fontWeight: FontWeight.bold,
                       ),
                       colors: const [Color(0xFFBF0C6D), Color(0xFF3A2DFF)],
-                      gradientType: GradientType.linear,
-                      gradientDirection: GradientDirection.ltr,
                     ),
                   ],
                 ),
-
                 const SizedBox(height: 10),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.75,
-                      height: 40,
-                      alignment: Alignment.center,
-
-                      decoration: BoxDecoration(),
-                      child: Text(
-                        "Tecnologias que eu tenho estuado/trabalhado recentemente.",
-                        style: TextStyle(
-                          fontWeight: FontWeight.normal,
-                          color: Colors.white,
-                          fontSize: 14,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 20),
-                  ],
+                const Text(
+                  "Tecnologias que tenho me aprimorado recentemente.",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Color(0xFF94A3B8), fontSize: 16),
                 ),
               ],
             ),
@@ -1188,6 +1164,7 @@ class _HomepageState extends State<Homepage> {
 
           const SizedBox(height: 50),
 
+          //titulo projects
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: Column(
@@ -1197,14 +1174,13 @@ class _HomepageState extends State<Homepage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      "My",
+                      "My ",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                         fontSize: 28,
                       ),
                     ),
-                    const SizedBox(width: 10),
                     GradientText(
                       "Projects",
                       style: const TextStyle(
@@ -1217,13 +1193,9 @@ class _HomepageState extends State<Homepage> {
                 ),
                 const SizedBox(height: 10),
                 const Text(
-                  "Alguns projetos feitos por mim.",
+                  "Alguns projetos realizados por mim",
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontWeight: FontWeight.normal,
-                    color: Colors.white,
-                    fontSize: 14,
-                  ),
+                  style: TextStyle(color: Color(0xFF94A3B8), fontSize: 16),
                 ),
               ],
             ),
@@ -1231,173 +1203,63 @@ class _HomepageState extends State<Homepage> {
 
           const SizedBox(height: 30),
 
-          SizedBox(
-            height: 500,
-            width: double.infinity,
-            child: PageView(
-              controller: PageController(viewportFraction: 0.85),
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Container(
-                    padding: const EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF14162A),
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(color: Colors.white12, width: 0.5),
+          Column(
+            children: [
+              SizedBox(
+                height: 500,
+                child: PageView(
+                  controller: _pageController,
+                  physics: const BouncingScrollPhysics(),
+                  children: [
+                    
+                    //projeto 1 - Tool e Tech
+                    const CardProjeto(
+                      titulo: 'Tool & Tech',
+                      subtitulo: 'Fullstack Developer | UX/UI',
+                      descricao:
+                          'Sistema de monitoramento de sensores com visualização dos dados em tempo real.',
+                      imagemUrl:
+                          'https://akira-sunsets-portfolio.vercel.app/assets/img/tt.svg',
+                      tags: ['#React', '#Django', '#Sqlite'],
+                      link: 'https://github.com/AkiraSunsets/Tool-and-Tech',
+                      participantes: '1',
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: SvgPicture.network(
-                            'https://akira-sunsets-portfolio.vercel.app/assets/img/letmovie.svg',
-                            width: double.infinity,
-                            height: 180,
-                            fit: BoxFit.contain, 
-                            placeholderBuilder: (BuildContext context) =>
-                                const Center(
-                                  child: CircularProgressIndicator(),
-                                ),
-                          ),
-                        ),
-                        const SizedBox(height: 20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const Text(
-                              'Tool & Tech',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 19,
-                                color: Colors.white,
-                              ),
-                            ),
-                            const Icon(
-                              Icons.people_rounded,
-                              color: Colors.white,
-                              size: 24,
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 10),
-                        const Text(
-                          "2º Sem | Integrador Front/Backend Project",
-                          style: TextStyle(
-                            color: Color(0xFF584DF3),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        const SizedBox(height: 15),
-                        const Text(
-                          'Plataforma de monitoramento com visualização de dados em tempo real.',
-                          style: TextStyle(color: Colors.white, fontSize: 14),
-                        ),
-                        const SizedBox(height: 25),
 
-                        // TAGS DECLARADAS UMA POR UMA (ESTILO MANUAL)
-                        Wrap(
-                          spacing: 8,
-                          runSpacing: 8,
-                          children: [
-                            // TAG #React
-                            Container(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 12,
-                                vertical: 6,
-                              ),
-                              decoration: BoxDecoration(
-                                color: const Color(0xAC7928CA),
-                                borderRadius: BorderRadius.circular(50),
-                                border: Border.all(
-                                  color: const Color(0xFF7928CA),
-                                ),
-                              ),
-                              child: const Text(
-                                "#React",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 11,
-                                ),
-                              ),
-                            ),
-                            // TAG #Django
-                            Container(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 12,
-                                vertical: 6,
-                              ),
-                              decoration: BoxDecoration(
-                                color: const Color(0xAC7928CA),
-                                borderRadius: BorderRadius.circular(50),
-                                border: Border.all(
-                                  color: const Color(0xFF7928CA),
-                                ),
-                              ),
-                              child: const Text(
-                                "#Django",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 11,
-                                ),
-                              ),
-                            ),
-                            // TAG #Sqlite
-                            Container(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 12,
-                                vertical: 6,
-                              ),
-                              decoration: BoxDecoration(
-                                color: const Color(0xAC7928CA),
-                                borderRadius: BorderRadius.circular(50),
-                                border: Border.all(
-                                  color: const Color(0xFF7928CA),
-                                ),
-                              ),
-                              child: const Text(
-                                "#Sqlite",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 11,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
 
-                        const Spacer(),
-                        const Divider(thickness: 0.2, color: Colors.grey),
-                        const SizedBox(height: 10),
-                        GestureDetector(
-                          onTap: () => _abrirLink(
-                            'https://github.com/AkiraSunsets/Tool-and-Tech',
-                          ),
-                          child: Row(
-                            children: const [
-                              Text(
-                                'View Code',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                  color: Color(0xFFFF0C92),
-                                  decoration: TextDecoration.underline,
-                                ),
-                              ),
-                              SizedBox(width: 8),
-                              Icon(Icons.code, color: Color(0xFFFF0C92)),
-                            ],
-                          ),
-                        ),
-                      ],
+                    
+                    //projeto 2 - PN Technical
+                    const CardProjeto(
+                      titulo: 'PN Technical',
+                      subtitulo: 'Frontend Developer | UX/UI',
+                      descricao:
+                          'Plataforma que analisa dados técnicos e sugere alternativas sustentáveis.',
+                      imagemUrl:
+                          'https://akira-sunsets-portfolio.vercel.app/assets/img/pn.svg',
+                      tags: ['#React', '#TailwindCSS', '#Figma'],
+                      participantes: '3',
                     ),
-                  ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+
+              const SizedBox(height: 20),
+
+              // Indicador de Páginas
+              SmoothPageIndicator(
+                controller: _pageController,
+                count: 2, 
+                effect: const ExpandingDotsEffect(
+                  activeDotColor: Color(0xFFBF0C6D),
+                  dotColor: Color(0xFF14162A),
+                  dotHeight: 8,
+                  dotWidth: 8,
+                  expansionFactor: 3,
+                  spacing: 8,
+                ),
+              ),
+            ],
           ),
+
           const SizedBox(height: 50),
           Column(
             mainAxisSize: MainAxisSize.max,
@@ -1858,6 +1720,7 @@ class _HomepageState extends State<Homepage> {
           ),
 
           const SizedBox(height: 40),
+
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
 
