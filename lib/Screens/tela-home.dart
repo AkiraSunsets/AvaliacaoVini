@@ -4,7 +4,7 @@ import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:portfolioAS/Components/card-project.dart';
+import 'package:AvaliacaoVini/Components/card-project.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -216,7 +216,7 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ),
 
-                const SizedBox(height: 50),
+                const SizedBox(height: 100),
               ],
             ),
           ),
