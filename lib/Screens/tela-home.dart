@@ -1176,37 +1176,112 @@ class _HomepageState extends State<Homepage> {
             children: [
               LayoutBuilder(
                 builder: (context, constraints) {
-                  double dynamicHeight = constraints.maxWidth < 600 ? 580 : 500;
+                  double dynamicHeight = constraints.maxWidth < 350 ? 500 : 500;
                   return SizedBox(
                     height: dynamicHeight,
                     child: PageView(
                       controller: _pageController,
+                      clipBehavior: Clip.none,
                       physics: const BouncingScrollPhysics(),
                       children: [
-                        //projeto 1 - Tool e Tech
+                        //projeto 1 - PN Technical
+                        const CardProjeto(
+                          titulo: 'PN Technical Analysis',
+                          subtitulo: 'Frontend Developer | UX/UI',
+                          descricao:
+                              'Plataforma que analisa dados técnicos e sugere alternativas sustentáveis corporativas.',
+                          imagemUrl:
+                              'https://akira-sunsets-portfolio.vercel.app/assets/img/pn.svg',
+                          tags: [
+                            '#React',
+                            '#TailwindCSS',
+                            '#Django',
+                            '#Sqlite',
+                            '#Figma',
+                          ],
+                          participantes: '3',
+                        ),
+
+                        //projeto 2 - let movie
+                        const CardProjeto(
+                          titulo: 'LetMovie',
+                          subtitulo: 'Fullstack Developer | UX/UI',
+                          descricao:
+                              'Plataforma web de catálogo de filmes com painel administrativo e foco na usabilidade.',
+                          imagemUrl:
+                              'https://akira-sunsets-portfolio.vercel.app/assets/img/letmovie.svg',
+                          tags: [
+                            '#React',
+                            '#MySQL',
+                            '#Python',
+                            '#Figma',
+                            '#Krita',
+                          ],
+                          link: 'https://github.com/AkiraSunsets/LetMovie',
+                          participantes: '1',
+                        ),
+
+                        //projeto 3 - tt
                         const CardProjeto(
                           titulo: 'Tool & Tech',
                           subtitulo: 'Fullstack Developer | UX/UI',
                           descricao:
-                              'Sistema de monitoramento de sensores com visualização dos dados em tempo real.',
+                              'Sistema de monitoramento de sensores (luminosidade, umidade, temp) em tempo real.',
                           imagemUrl:
                               'https://akira-sunsets-portfolio.vercel.app/assets/img/tt.svg',
-                          tags: ['#React', '#Django', '#Sqlite'],
+                          tags: [
+                            '#React',
+                            '#Django',
+                            '#Sqlite',
+                            '#Bootstrap',
+                            '#Figma',
+                          ],
                           link: 'https://github.com/AkiraSunsets/Tool-and-Tech',
                           participantes: '1',
                         ),
 
-                        //projeto 2 - PN Technical
+                        //projeto 4 - cora
                         const CardProjeto(
-                          titulo: 'PN Technical',
+                          titulo: 'CORA',
                           subtitulo: 'Frontend Developer | UX/UI',
                           descricao:
-                              'Plataforma que analisa dados técnicos e sugere alternativas sustentáveis.',
+                              'Solução para gestão de tickets de cartão corporativo. Premiada pelo Voto Popular no Hackathon Bosch.',
                           imagemUrl:
-                              'https://akira-sunsets-portfolio.vercel.app/assets/img/pn.svg',
-                          tags: ['#React', '#TailwindCSS', '#Figma'],
-                          participantes: '3',
+                              'https://akira-sunsets-portfolio.vercel.app/assets/img/cora.svg',
+                          tags: [
+                            '#React',
+                            '#FastAPI',
+                            '#Pandas',
+                            '#Selenium',
+                            '#Sqlite',
+                          ],
+                          participantes: '4',
                         ),
+
+                        //projeto 5 - magic shop
+                        const CardProjeto(
+                          titulo: 'Magic Shop',
+                          subtitulo: 'Frontend Developer | UX/UI',
+                          descricao:
+                              'Simulação de e-commerce para venda de pelúcias com navegação intuitiva.',
+                          imagemUrl:
+                              'https://akira-sunsets-portfolio.vercel.app/assets/img/magicshop.svg',
+                          tags: ['#HTML', '#CSS', '#Bootstrap', '#Figma'],
+                          link:
+                              'https://github.com/AkiraSunsets/Magic-Shop-Lima',
+                          participantes: '1',
+                        ),
+
+                        //projeto 6 - chacaras
+                        const CardProjeto(
+                      titulo: 'Espaço para Eventos',
+                      subtitulo: 'Frontend Developer | UX/UI',
+                      descricao: 'Portfólio digital para divulgação de chácaras, reunindo informações e contato.',
+                      imagemUrl: 'https://akira-sunsets-portfolio.vercel.app/assets/img/chacaras.jpg',
+                      tags: ['#HTML', '#CSS', '#Javascript', '#Node.js', '#Figma'],
+                      link: 'https://ketlynlnaraujo.wixsite.com/espacoparachacaras',
+                      participantes: '2',
+                    ),
                       ],
                     ),
                   );
@@ -1218,7 +1293,7 @@ class _HomepageState extends State<Homepage> {
               // Indicador de Páginas
               SmoothPageIndicator(
                 controller: _pageController,
-                count: 2,
+                count: 6,
                 effect: const ExpandingDotsEffect(
                   activeDotColor: Color(0xFFBF0C6D),
                   dotColor: Color(0xFF14162A),
